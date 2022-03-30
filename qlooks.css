@@ -1,0 +1,68 @@
+body{
+    backdrop-filter: blur(5px);
+    display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+    
+}
+  .questions{
+      filter: none;
+      border: 2px solid rgb(0, 0, 0);
+      font-weight: 500;
+      font-size: 18px;
+      background-color: rgb(255, 255, 255, 0.5);
+      border-radius: 20px;
+      width:70%;
+      height: 150vh;
+      color: white;
+
+  }
+
+  .Hcontainer{
+     text-align: center;
+      font-size: 30px;
+  }
+
+  .label{
+      color: black;
+  }
+  
+  #answer{
+      background-color: transparent;
+      border: 1.5px solid black;
+      width:80%;
+      height: 80px;
+      color: white;
+      font-size: 15px;
+      margin-left: 10px;
+      
+  }
+
+  .radio{
+     padding-left: 10px;
+    
+
+    }
+
+    .Q{
+        
+        background-color: #ed5f00;
+    }
+     
+    .btn{
+        float: right;
+        margin-right: 20px;
+        margin-top: 10px;
+        height: 40px;
+        width: 90px;
+       border: 2px solid black;
+       border-radius: 10px;
+        background: #ed5f00;
+        color: white;
+
+    }
+.btn:hover{
+    background: -webkit-linear-gradient(left,#003366,#004080,#0059b3
+    , #0073e6);
+}

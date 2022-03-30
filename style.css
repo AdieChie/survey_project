@@ -1,0 +1,118 @@
+body{
+  background:rgb(161, 161, 255);
+}
+.main-container {
+  background-color: #e9e9e9;
+  width: 80%;
+  height: 900px;
+  margin: 1% auto;
+  border-radius: 2%;
+  overflow: auto;
+}
+
+.survey-header {
+  background: -webkit-linear-gradient(left,#003366,#004080,#0059b3
+  , #0073e6);
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  top: -30px;
+  color:white;
+  border-radius: 15px;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+
+.dot {
+  height: 45px;
+  width: 45px;
+  background-color: rgb(1, 1, 128);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+.numbering {
+  position: relative;
+  top: 30%;
+  left: 35%;
+  color: white;
+}
+h2 {
+  width: 100%;
+  margin-left: 10px;
+}
+.answer {
+  display: flex;
+  margin-left: 3rem;
+}
+/* .arrow-answer {
+  color: green;
+  font-size: 20px;
+} */
+.standard-input {
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  outline:none;
+  border: 1.5px solid black;
+  background: none;
+  
+  
+}
+
+.arrow-answer-yes-no {
+  display: hidden;
+}
+.yes-no {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.answer-yes-no {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  margin-left: 60px;
+}
+
+.answer-textAreaField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+}
+.answer-checkRadio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -11rem;
+}
+
+.radioQuestions {
+  display: block;
+}
+
+.submitting-answers {
+  background: -webkit-linear-gradient(left,#003366,#004080,#0059b3
+  , #0073e6);
+  color: white;
+  width: 11rem;
+  height: 3rem;
+  border-radius: 10px;
+  position: relative;
+  top: 3%;
+  left: 40%;
+  cursor: pointer;
+}
+

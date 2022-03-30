@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <script src="https://kit.fontawesome.com/a310f61d4e.js" crossorigin="anonymous"></script>
+
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='dash2.css' rel='stylesheet'>
+
+    <!--<title>Dashboard Sidebar Menu</title>-->
+</head>
+
+<body>
+    <header class="topHeader">
+        <div class="search-box">
+            <form id="book-form">
+                <input type="text" placeholder="Search...">
+                <button type="submit" class="sbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="profile-details">
+            <img src="Boxf.png" alt="">
+        </div>
+    </header>
+    <nav class="sidebar close">
+        <header class="sideHeader">
+            <div class="image-text">
+                <span class="image">
+                    <img src="pea.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name"></span>
+                    <span class="profession">Admin</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle fa-solid fa-circle-chevron-right'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link" data-tab-target="#dash" class="tab active">
+                        <a>
+                            <i class="fa-solid fa-house-user icon"></i>
+                            <span class="text nav-text"> Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link" data-tab-target="#report" class="tab">
+                        <a>
+                            <i class="fa-solid fa-chart-line icon"></i>
+                            <span class="text nav-text">Surveys Reports</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link" data-tab-target="#notify" class="tab">
+                        <a >
+                            <i class="fa-solid fa-bell icon"></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link" data-tab-target="#Analyis" class="tab">
+                        <a>
+                            <i class="fa-solid fa-chart-pie icon"></i>
+                            <span class="text nav-text">Analytics</span>
+                            
+                        </a>
+                    </li>
+                    <li class="nav-link" data-tab-target="#set" class="tab">
+                        <a>
+                            <i class="fa-solid fa-gears icon "></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="nav-link" data-tab-target="#Logout" class="tab" id="log">
+                    <a>
+                        <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class="fa-solid  icon fa-moon "></i>
+                        <i class="fa-solid icon fa-sun "></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+    <section class="home active" id="dash" data-tab-content>
+
+        <div class="text">Home </div>
+        <div class="SurveyBoxes">
+            <div class="top">
+                <input type="text" class="surveyName" placeholder="enter survey name" id="input-survey">
+                <button type="submit" class="create" id="creat"> Create Survey</button>
+            </div>
+            <div class="ListContainer">
+                <div class="title">Survey List</div>
+                <div class="survey-details">
+
+                    <table class="myTable">
+                        <thead>
+                            <tr class="details">
+                                <th>Title:</th>
+                                <th>Created by:</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="sur-list">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+
+        <!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+
+        <div id="QModal" class="Quemodal">
+            <button class="close" id="cls">&times;</button>
+            <!-- Modal content -->
+            <div class="modal-content">
+                <h2>Add Survey Questions</h2>
+
+                <textarea class="surQue" placeholder="type your question here"></textarea>
+                <div class="input-field">
+                    <i class="fa-thin fa-list-dropdown"></i>
+                    <select name="qType" id="type">
+                        <option class="option">--select question type</option>
+                        <option class="field">Input-field</option>
+                        <option class="yes/no">Yes/No</option>
+                        <option class="range">Range</option>
+                    </select>
+                    <div class="divbuttons">
+                        <input type="button" class="saveQuestion" value=" Save">
+                        <input type="button" class="Finish" value=" Finish">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+        <div class="ListModal">
+            <div class="modal-content">
+                <h2> Survey Questions</h2>
+                <div>
+                    <div class="q-list">
+                        <div class="sub-list">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="list button">
+                    <input type="button" class="Done" value=" Done">
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+    </section>
+    <section id="report" data-tab-content>
+        <!-- <lable>Total Number of surveys:</lable> -->
+        <label class="total">Total Number of surveys: </label><br>
+        <label class="totalResponses">Total Number of Responses: </label>
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+    </section>
+    <section id="Analyis" data-tab-content>
+        <table class="Table">
+            <thead id="thead">
+              
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+        <!-- <canvas id="myChar" style="width:100%;max-width:600px"></canvas> -->
+    </section>
+    <section id="set" data-tab-content>
+        <p>User Settings</p>
+        <h2 class="setPro">Profile Settings</h2>
+
+        <div class="setProf">
+
+
+            <div class="col-md-9">
+
+                <div class="container">
+
+                    <form>
+
+                        <div class="form-group">
+
+                            <label for=fullName>Full Name</label>
+                            <input type="text" class="form-control" id="fullName">
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for=email>Email</label>
+                            <input type="email" class="form-control" id="email">
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for=pass>Password</label>
+                            <input type="password" class="form-control" id="pass">
+
+                        </div>
+
+                        <div class="row mt-5">
+
+                            <div class="col">
+
+                                <button type="button" class="sv">Save Changes</button>
+
+
+                                <button type="button" class="c">Cancel</button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <section id="Logout" data-tab-content>
+
+        <!-- Modal content -->
+        <div class="log-content">
+            <p>Are You sure ?</p>
+            <div class="btm">
+                <button class="yes">Yes</button>
+                <button class="No">No</button>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="httpMethods.js"></script>
+    <script src="dash2.js"></script>
+    <!-- <script src="report.js"></script> -->
+</body>
+
+</html>

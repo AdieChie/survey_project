@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dashApp.js" ></script>
+    <link href="dashDesign.css" rel="stylesheet">
+    <title>Dash</title>
+</head>
+<body>
+    <div id="dash" class="tabcontent">
+        <h1>Statistics</h1>
+        <p>summary of the survey.</p>
+      </div>
+      
+      <div id="settings" class="tabcontent">
+        <h1>settigns</h1>
+        <p>configure display</p> 
+      </div>
+      
+      <div id="edit" class="tabcontent">
+        <h1>Edit the survey</h1>
+        <p>edit the survey questions</p>
+      </div>
+      
+      <div id="logout" class="tabcontent">
+        <h1>Logging out</h1>
+        <p>sign out</p>
+      </div>
+      
+      <button class="tablink" onclick="openCity('dash', this, 'red')" id="defaultOpen">DashBoard</button>
+      <button class="tablink" onclick="openCity('settings', this, 'green')">Settings</button>
+      <button class="tablink" onclick="openCity('edit', this, 'blue')">Edit Survey</button>
+      <button class="tablink" onclick="openCity('logout', this, 'orange')">Log Out</button>
+      <script src="httpMethods.js" ></script>
+      <script src="dashApp.js" ></script>
+</body>
+</html>
